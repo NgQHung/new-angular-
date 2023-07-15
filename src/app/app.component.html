@@ -10,3 +10,8 @@
   </ul>
 </nav>
 <router-outlet></router-outlet>
+<ul [ngSwitch]="loginName">
+  <li *ngSwitchCase="'admin'"><p>Admin is logged in</p></li>
+  <li *ngSwitchCase="'user'"><p>User is logged in</p></li>
+  <li *ngSwitchDefault><p>Please enter a valid login name</p></li>
+</ul>

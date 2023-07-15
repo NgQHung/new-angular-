@@ -115,7 +115,5 @@ export class HomeComponent {
       this.vietnamData.find((data) => data.city === city)?.district || [];
   }
 
-  public loginName: string = 'user';
-
   public onInit(): void {}
 }

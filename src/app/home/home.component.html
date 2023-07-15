@@ -1,5 +1,68 @@
-<ul [ngSwitch]="loginName">
-  <li *ngSwitchCase="'admin'"><p>Admin is logged in</p></li>
-  <li *ngSwitchCase="'user'"><p>User is logged in</p></li>
-  <li *ngSwitchDefault><p>Please enter a valid login name</p></li>
-</ul>
+<div>
+  <p>This is a Home component</p>
+  <input type="text" [(ngModel)]="age" />
+  <p>Hi, I am {{ name }} {{ surname }}, I am {{ age }}</p>
+  <!-- <input type="text" [value]="name" [title]="'this is ' + name" />
+  <input type="text" [value]="surname" [title]="'This is ' + surname" />
+  <input type="text" [value]="age" [title]="'He is ' + age" /> -->
+  <!-- run many times after type a number -->
+  <h2 *ngIf="age >= 18">You are too old</h2>
+  <h2 *ngIf="age < 18">You are quite young</h2>
+  <!-- alternative solution is using ng-template -->
+  <div *ngIf="age < 18; then young; else old"></div>
+  <ng-template #old
+    ><h2>
+      You are too old(alternative solution using ng-template)
+    </h2></ng-template
+  >
+  <ng-template #young
+    ><h2>
+      You are too young(alternative solution using ng-template)
+    </h2></ng-template
+  >
+  <button (click)="resetHandler()">Reset</button>
+  <h1>A list of names</h1>
+  <tr *ngFor="let item of names; let i = index">
+    <td>{{ i + 1 }}: {{ item }}</td>
+  </tr>
+  <table class="">
+    <tr>
+      <th></th>
+
+      <th>First name</th>
+      <th>Age</th>
+      <th>Is good?</th>
+      <th>working or not?</th>
+    </tr>
+    <tr *ngFor="let item of newNames; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>
+        <span>{{ item.name }}</span>
+      </td>
+      <td>
+        <span>{{ item.age }}</span>
+      </td>
+      <td [ngClass]="item.good ? '' : 'red'">
+        <span>{{ item.good }}</span>
+      </td>
+      <td *ngIf="item.good; then good; else bad"></td>
+
+      <ng-template #good><span>is good</span></ng-template>
+      <ng-template #bad><span class="red">is bad</span></ng-template>
+      <!-- using ngIf -->
+      <!-- <td *ngIf="item.working">is working</td> -->
+      <!-- using pipe -->
+      <td>{{ item.working | onWorking }}</td>
+    </tr>
+  </table>
+  <select (change)="selectedData($event)">
+    <option *ngFor="let data of vietnamData" value="{{ data.city }}">
+      {{ data.city }}
+    </option>
+  </select>
+  <select>
+    <option *ngFor="let district of filteredData" value="{{ district }}">
+      {{ district }}
+    </option>
+  </select>
+</div>
