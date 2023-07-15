@@ -8,9 +8,11 @@ import { ModuleComponent } from './module/module.component';
 import { OnSalePipe } from './on-sale.pipe';
 import { OnworkingPipe } from './onworking.pipe';
 import { OnWorkingPipe } from './on-working.pipe';
+import { ProductComponent } from './product/product.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ModuleComponent, OnSalePipe, OnworkingPipe, OnWorkingPipe],
+  declarations: [AppComponent, HomeComponent, ModuleComponent, OnSalePipe, OnworkingPipe, OnWorkingPipe, ProductComponent, PageNotFoundComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
