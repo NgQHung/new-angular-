@@ -50,9 +50,19 @@
       <ng-template #good><span>is good</span></ng-template>
       <ng-template #bad><span class="red">is bad</span></ng-template>
       <!-- using ngIf -->
-      <td *ngIf="item.working">is working</td>
-      using pipe
-      <td *ngIf="item.working">is working</td>
+      <!-- <td *ngIf="item.working">is working</td> -->
+      <!-- using pipe -->
+      <td>{{ item.working | onWorking }}</td>
     </tr>
   </table>
+  <select (change)="selectedData($event)">
+    <option *ngFor="let data of vietnamData" value="{{ data.city }}">
+      {{ data.city }}
+    </option>
+  </select>
+  <select>
+    <option *ngFor="let district of filteredData" value="{{ district }}">
+      {{ district }}
+    </option>
+  </select>
 </div>

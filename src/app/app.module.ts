@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ModuleComponent } from './module/module.component';
 import { OnSalePipe } from './on-sale.pipe';
+import { OnworkingPipe } from './onworking.pipe';
+import { OnWorkingPipe } from './on-working.pipe';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ModuleComponent, OnSalePipe],
+  declarations: [AppComponent, HomeComponent, ModuleComponent, OnSalePipe, OnworkingPipe, OnWorkingPipe],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
