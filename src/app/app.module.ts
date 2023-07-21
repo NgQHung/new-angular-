@@ -10,9 +10,20 @@ import { OnworkingPipe } from './onworking.pipe';
 import { OnWorkingPipe } from './on-working.pipe';
 import { ProductComponent } from './product/product.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HighlightDirective } from './Directive/highlight.directive';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ModuleComponent, OnSalePipe, OnworkingPipe, OnWorkingPipe, ProductComponent, PageNotFoundComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ModuleComponent,
+    OnSalePipe,
+    OnworkingPipe,
+    OnWorkingPipe,
+    ProductComponent,
+    PageNotFoundComponent,
+    HighlightDirective,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

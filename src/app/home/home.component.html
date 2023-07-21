@@ -1,12 +1,12 @@
 <div>
-  <p>This is a Home component</p>
+  <p [appHighlight]="'red'">This is a Home component</p>
   <input type="text" [(ngModel)]="age" />
-  <p>Hi, I am {{ name }} {{ surname }}, I am {{ age }}</p>
+  <p appHighlight>Hi, I am {{ name }} {{ surname }}, I am {{ age }}</p>
   <!-- <input type="text" [value]="name" [title]="'this is ' + name" />
   <input type="text" [value]="surname" [title]="'This is ' + surname" />
   <input type="text" [value]="age" [title]="'He is ' + age" /> -->
   <!-- run many times after type a number -->
-  <h2 *ngIf="age >= 18">You are too old</h2>
+  <h2 [appHighlight]="'green'" *ngIf="age >= 18">You are too old</h2>
   <h2 *ngIf="age < 18">You are quite young</h2>
   <!-- alternative solution is using ng-template -->
   <div *ngIf="age < 18; then young; else old"></div>
@@ -21,7 +21,7 @@
     </h2></ng-template
   >
   <button (click)="resetHandler()">Reset</button>
-  <h1>A list of names</h1>
+  <h1 [appHighlight]="myColor">A list of names</h1>
   <tr *ngFor="let item of names; let i = index">
     <td>{{ i + 1 }}: {{ item }}</td>
   </tr>
@@ -65,4 +65,8 @@
       {{ district }}
     </option>
   </select>
+
+  <p>counter = {{ counter }}</p>
+  <p>Squared = {{ squared }}</p>
+  <p></p>
 </div>
