@@ -11,7 +11,7 @@ export class CommonService {
     console.log('work');
     return n * n;
   }
-  public onSubmit(data: string): void {
+  public onSubmit(data: any): void {
     console.log('onSubmit name= ', data);
   }
 }

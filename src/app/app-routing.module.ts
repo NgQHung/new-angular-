@@ -5,6 +5,7 @@ import { ModuleComponent } from './module/module.component';
 import { ProductComponent } from './product/product.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,11 @@ const routes: Routes = [
   {
     path: 'templateForm',
     component: TemplateDrivenFormComponent,
+  },
+
+  {
+    path: 'reactiveForm',
+    component: ReactiveFormComponent,
   },
   {
     path: '**',
