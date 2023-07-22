@@ -11,10 +11,10 @@ export class GetDataComponent {
 
   public ngOnInit(): void {
     this.httpServerService.getComments().subscribe((data) => {
-      console.log(data.results);
+      console.log(data);
     });
-    this.httpServerService.getRandomUsers().subscribe((data) => {
-      console.log(data.results);
-    });
+    // this.httpServerService.getRandomUsers().subscribe((data) => {
+    //   console.log(data.results);
+    // });
   }
 }
