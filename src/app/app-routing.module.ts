@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ModuleComponent } from './module/module.component';
 import { ProductComponent } from './product/product.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'product',
     component: ProductComponent,
+  },
+  {
+    path: 'templateForm',
+    component: TemplateDrivenFormComponent,
   },
   {
     path: '**',

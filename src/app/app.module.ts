@@ -11,6 +11,7 @@ import { OnWorkingPipe } from './on-working.pipe';
 import { ProductComponent } from './product/product.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HighlightDirective } from './Directive/highlight.directive';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HighlightDirective } from './Directive/highlight.directive';
     ProductComponent,
     PageNotFoundComponent,
     HighlightDirective,
+    TemplateDrivenFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
